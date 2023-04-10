@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #d8edfa;
+}
+
+.childrenContainer {
+    padding: 10px;
+}
+
+.header {
+    background-color: #d8edfa;
+    color: #65899b;
+    padding: 12px;
+}

@@ -1,0 +1,9 @@
+.button {
+    border: 1px solid gray;
+    padding: 8px;
+    user-select: none;
+    cursor: pointer;
+    background-color: white;
+    gap: 4px;
+    display: inline-block;
+}

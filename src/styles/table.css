@@ -1,0 +1,17 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr {
+    border-bottom: 1px solid gray;
+    text-align: left;
+}
+
+td {
+    padding: 4px;
+}
+
+tr:hover:not(:first-child){
+    background-color: rgb(216, 216, 216);
+}

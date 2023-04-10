@@ -1,0 +1,21 @@
+.navigation {
+    background-color: #222222;
+}
+
+.container {
+    max-width: 1400px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 48px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(193, 193, 193);
+}
+
+.logoAndPagesContainer {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+}
