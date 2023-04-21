@@ -4,27 +4,25 @@ export const Table = () => {
   return (
     <table>
       <tr>
-        <th>Домен</th>
-        <th>Число пользователей</th>
-        <th>Аффинитивность</th>
+        <th>Время</th>
+        <th>Событие</th>
+        <th>Пользователь</th>
+        <th>Комментарий</th>
       </tr>
       <tr>
-        <td>34,5</td>
-        <td>3,5</td>
-        <td>36</td>
-        <td>23</td>
+        <td>2023-03-29 10:47:13</td>
+        <td>Обновлено</td>
+        <td>a.omelyanchik</td>
       </tr>
       <tr>
-        <td>35,5</td>
-        <td>4</td>
-        <td>36⅔</td>
-        <td>23–23,5</td>
+        <td>2023-03-29 10:47:13</td>
+        <td>Обновлено</td>
+        <td>a.omelyanchik</td>
       </tr>
       <tr>
-        <td>36</td>
-        <td>4,5</td>
-        <td>37⅓</td>
-        <td>23,5</td>
+        <td>2023-03-29 10:47:13</td>
+        <td>Обновлено</td>
+        <td>a.omelyanchik</td>
       </tr>
     </table>
   );

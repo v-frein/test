@@ -34,38 +34,60 @@ class CustomizedAxisTick extends PureComponent {
   }
 }
 
-const data = [
-  { name: "Page A", uv: 400, pv: 2400, amt: 2400 },
-  { name: "Page A", uv: 300, pv: 2400, amt: 2400 },
-  { name: "Page A", uv: 500, pv: 2400, amt: 2400 },
-  { name: "Page A", uv: 700, pv: 2400, amt: 2400 },
-  { name: "Page A", uv: 200, pv: 2400, amt: 2400 },
-];
+interface ScheduleProps {
+  startDate: Date;
+  endDate: Date;
+  data: any;
+}
 
-export const Schedule = () => {
+export const Schedule = ({ startDate, endDate, data }: ScheduleProps) => {
   return (
     <>
       <div className={styles.typesContainer}>
-        <Type name="Тип" />
-        <Type name="Тип" />
-        <Type name="Тип" />
-        <Type name="Тип" />
+        <Type name="HDFS/ruid" color="93, 135, 90" />
+        <Type name="HDFS/gruid" color="222, 115, 141" />
+        <Type name="Bacon/ruid" color="121, 106, 120" />
+        <Type name="Bacon/gruid" color="245, 254, 159" />
+        <Type name="Bacon/elastic" color="137, 238, 158" />
+        <Type name="Bacon/SSP/elastic" color="37, 29, 145" />
       </div>
       <ResponsiveContainer width={700} height={250}>
         <AreaChart
           width={700}
           height={250}
           data={data}
-          margin={{ top: 10, right: 20, left: 0, bottom: 30 }}
+          margin={{ top: 10, right: 20, left: 0, bottom: 50 }}
         >
           <defs>
-            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+            <linearGradient id="colorHDFS/ruid" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#5D875A" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#5D875A" stopOpacity={0} />
             </linearGradient>
-            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+            <linearGradient id="colorHDFS/gruid" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#DE738D" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#DE738D" stopOpacity={0} />
+            </linearGradient>
+            <linearGradient id="colorBacon/ruid" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#796A78" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#796A78" stopOpacity={0} />
+            </linearGradient>
+            <linearGradient id="colorBacon/gruid" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#F5FE9F" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#F5FE9F" stopOpacity={0} />
+            </linearGradient>
+            <linearGradient id="colorBacon/elastic" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#89EE9E" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#89EE9E" stopOpacity={0} />
+            </linearGradient>
+            <linearGradient
+              id="colorBacon/SSP/elastic"
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="1"
+            >
+              <stop offset="5%" stopColor="#891D91" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#891D91" stopOpacity={0} />
             </linearGradient>
           </defs>
           <XAxis dataKey="name" tick={<CustomizedAxisTick />} />
@@ -74,17 +96,46 @@ export const Schedule = () => {
           <Tooltip />
           <Area
             type="monotone"
-            dataKey="uv"
-            stroke="#8884d8"
+            dataKey="HDFS/ruid"
+            stroke="#5D875A"
             fillOpacity={1}
-            fill="url(#colorUv)"
+            fill="url(#colorHDFS/ruid)"
           />
           <Area
             type="monotone"
-            dataKey="pv"
-            stroke="#82ca9d"
+            dataKey="HDFS/gruid"
+            stroke="#DE738D"
             fillOpacity={1}
-            fill="url(#colorPv)"
+            fill="url(#colorHDFS/gruid)"
+          />
+          <Area
+            type="monotone"
+            dataKey="Bacon/ruid"
+            stroke="#796A78"
+            fillOpacity={1}
+            fill="url(#colorBacon/ruid)"
+          />
+          <Area
+            type="monotone"
+            dataKey="Bacon/gruid"
+            stroke="#F5FE9F"
+            fillOpacity={1}
+            fill="url(#colorBacon/gruid)"
+          />
+
+          <Area
+            type="monotone"
+            dataKey="Bacon/elastic"
+            stroke="#89EE9E"
+            fillOpacity={1}
+            fill="url(#colorBacon/elastic)"
+          />
+          <Area
+            type="monotone"
+            dataKey="Bacon/SSP/elastic"
+            stroke="#891D91"
+            fillOpacity={1}
+            fill="url(#colorBacon/SSP/elastic)"
           />
         </AreaChart>
       </ResponsiveContainer>

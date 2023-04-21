@@ -1,10 +1,15 @@
+import { Link } from "react-router-dom";
 import styles from "./PagesList.module.css";
 
 export const PagesList = () => {
   return (
     <ul className={styles.container}>
-      <li>Таксономия</li>
-      <li>Сегменты</li>
+      <li>
+        <Link to="../taxonomy">Таксономия</Link>
+      </li>
+      <li>
+        <Link to="../segment">Сегменты</Link>
+      </li>
       <li>Аудитория</li>
       <li>Модели</li>
       <li>Отчёты</li>

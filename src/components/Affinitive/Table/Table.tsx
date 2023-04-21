@@ -9,22 +9,34 @@ export const Table = () => {
         <th>Аффинитивность</th>
       </tr>
       <tr>
-        <td>34,5</td>
-        <td>3,5</td>
-        <td>36</td>
-        <td>23</td>
+        <td>ipoteka.domclick.ru</td>
+        <td>647045</td>
+        <td>5861.3444345345</td>
       </tr>
       <tr>
-        <td>35,5</td>
-        <td>4</td>
-        <td>36⅔</td>
-        <td>23–23,5</td>
+        <td>ipoteka.domclick.ru</td>
+        <td>647045</td>
+        <td>5861.3444345345</td>
       </tr>
       <tr>
-        <td>36</td>
-        <td>4,5</td>
-        <td>37⅓</td>
-        <td>23,5</td>
+        <td>ipoteka.domclick.ru</td>
+        <td>647045</td>
+        <td>5861.3444345345</td>
+      </tr>
+      <tr>
+        <td>ipoteka.domclick.ru</td>
+        <td>647045</td>
+        <td>5861.3444345345</td>
+      </tr>
+      <tr>
+        <td>ipoteka.domclick.ru</td>
+        <td>647045</td>
+        <td>5861.3444345345</td>
+      </tr>
+      <tr>
+        <td>ipoteka.domclick.ru</td>
+        <td>647045</td>
+        <td>5861.3444345345</td>
       </tr>
     </table>
   );

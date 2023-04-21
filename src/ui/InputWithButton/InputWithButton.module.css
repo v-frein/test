@@ -8,6 +8,7 @@
 }
 
 .input {
+    width: calc(100% - 30px);
     outline: none;
     border-radius: 5px 0px 0px 5px;
     border-color: gray;

@@ -2,7 +2,11 @@ import { Tag } from "../../ui/Tag";
 
 import styles from "./SegmentName.module.css";
 
-export const SegmentName = ({ name }: { name: string }) => {
+interface SegmentNameProps {
+  name: string;
+}
+
+export const SegmentName = ({ name }: SegmentNameProps) => {
   return (
     <div className={styles.container}>
       <p className={styles.text}>Сегмент « {name} »</p>

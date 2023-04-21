@@ -1,0 +1,26 @@
+.setDateContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+ }
+ 
+.datePcikersContainer {
+    display: flex;
+}
+ 
+.datePicker {
+    width: inherit;
+}
+ 
+.datePickerSeparator {
+    padding: 2px;
+    background-color: #f5f5f5;
+}
+
+.left {
+    align-items: flex-start;
+}
+
+.right {
+    align-items: flex-end;
+}

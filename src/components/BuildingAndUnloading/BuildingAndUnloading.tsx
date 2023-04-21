@@ -13,7 +13,7 @@ export const BuildingAndUnloading = () => {
         <ParameterWithDescription
           nameWidth="151px"
           name="Онлайн-Сегмент"
-          description=<p>dasdasd</p>
+          description=<p>Да</p>
         />
         <ParameterWithDescription
           nameWidth="151px"
@@ -24,15 +24,15 @@ export const BuildingAndUnloading = () => {
                 Таблица:
                 {
                   <span className={styles.tableName}>
-                    ТестТестТестТестТестТест
+                    default.top100_sessions
                   </span>
                 }
               </p>
 
               <div className={styles.tableRules}>
-                <p>Тест</p>
-                <p>Тест</p>
-                <p>Тест</p>
+                <p>title contains "ипотек"</p>
+                <p>or url contains "ipotek"</p>
+                <p>or url contains "mortgage"</p>
               </div>
             </div>
           }
@@ -40,17 +40,17 @@ export const BuildingAndUnloading = () => {
         <ParameterWithDescription
           nameWidth="151px"
           name="Aerospike"
-          description="Ага"
+          description="Выгружается"
         />
         <ParameterWithDescription
           nameWidth="151px"
           name="Последняя нарезка"
-          description="Ага"
+          description="-"
         />
         <ParameterWithDescription
           nameWidth="151px"
           name="Последняя выгрузка"
-          description="Ага"
+          description="-"
         />
       </div>
     </DialogWithTitle>

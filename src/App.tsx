@@ -1,5 +1,7 @@
+import { Navigation } from "./components";
+
 function App() {
-  return <></>;
+  return <Navigation />;
 }
 
 export default App;

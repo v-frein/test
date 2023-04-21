@@ -1,18 +1,20 @@
 import styles from "./DialogWithTitle.module.css";
 
+interface DialogWithTitleProps {
+  name: string;
+  children?: React.ReactNode;
+  bgColor?: string;
+  color?: string;
+  footer?: React.ReactNode;
+}
+
 export const DialogWithTitle = ({
   name,
   children,
   bgColor,
   color,
   footer,
-}: {
-  name: string;
-  children?: React.ReactNode;
-  bgColor?: string;
-  color?: string;
-  footer?: React.ReactNode;
-}) => {
+}: DialogWithTitleProps) => {
   return (
     <div
       className={styles.container}

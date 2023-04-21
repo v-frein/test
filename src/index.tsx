@@ -2,9 +2,16 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import "reset-css";
+import "react-datepicker/dist/react-datepicker.css";
+
 import { Segment, Taxonomy } from "./pages";
+import App from "./App";
+import { EditSegment } from "./pages/EditSegment";
+import { ChangeHistory } from "./pages/ChangeHistory/ChangeHistory";
+import { BuildingHistory } from "./pages/BuildingHistory";
 
 const router = createBrowserRouter([
+  { path: "/", element: <App /> },
   {
     path: "/segment",
     element: <Segment />,
@@ -12,6 +19,18 @@ const router = createBrowserRouter([
   {
     path: "/taxonomy",
     element: <Taxonomy />,
+  },
+  {
+    path: "/editsegment",
+    element: <EditSegment />,
+  },
+  {
+    path: "/changehistory",
+    element: <ChangeHistory />,
+  },
+  {
+    path: "/buildinghistory",
+    element: <BuildingHistory />,
   },
 ]);
 

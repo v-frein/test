@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    gap: 8px;
+}
+
+.heading {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.top {
+    flex-direction: column;
+}
+
+.right {
+    text-align: right;
+}

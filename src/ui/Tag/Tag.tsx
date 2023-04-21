@@ -1,5 +1,9 @@
 import styles from "./Tag.module.css";
 
-export const Tag = ({ name }: { name: string }) => {
+interface TagProps {
+  name: string;
+}
+
+export const Tag = ({ name }: TagProps) => {
   return <div className={styles.tag}>{name}</div>;
 };

@@ -1,14 +1,22 @@
-import { useState } from "react";
-import DatePicker from "react-datepicker";
-
-import { Button, ParameterWithDescription } from "../../../ui";
+import { Button, ParameterWithDescription, RangeDatePicker } from "../../../ui";
 
 import styles from "./SetPeriod.module.css";
 
-export const SetPeriod = () => {
-  const [startDate, setStartDate] = useState(new Date("2014/02/08"));
-  const [endDate, setEndDate] = useState(new Date("2014/02/10"));
+interface SetPeriodProps {
+  startDate: Date;
+  endDate: Date;
+  setStartDate: React.Dispatch<React.SetStateAction<Date>>;
+  setEndDate: React.Dispatch<React.SetStateAction<Date>>;
+  setFilteredData: any;
+}
 
+export const SetPeriod = ({
+  startDate,
+  endDate,
+  setStartDate,
+  setEndDate,
+  setFilteredData,
+}: SetPeriodProps) => {
   return (
     <div className={styles.setPeriodContainer}>
       <div className={styles.infoContainer}>
@@ -23,30 +31,19 @@ export const SetPeriod = () => {
           nameWidth="175px"
         />
       </div>
-      <div className={styles.setDateContainer}>
-        <div className={styles.datePcikersContainer}>
-          <DatePicker
-            selected={startDate}
-            onChange={(date: Date) => setStartDate(date)}
-            selectsStart
-            startDate={startDate}
-            endDate={endDate}
-            wrapperClassName={styles.datePicker}
-            showPopperArrow={false}
-          />
-          <p className={styles.datePickerSeparator}>по</p>
-          <DatePicker
-            selected={endDate}
-            onChange={(date: Date) => setEndDate(date)}
-            selectsEnd
-            startDate={startDate}
-            endDate={endDate}
-            minDate={startDate}
-            wrapperClassName={styles.datePicker}
-            showPopperArrow={false}
-          />
-        </div>
-        <Button name="Применить" bgColor="#6dbae5" textColor="white" />
+      <div className={styles.setRangeContainer}>
+        <RangeDatePicker
+          startDate={startDate}
+          endDate={endDate}
+          setEndDate={setEndDate}
+          setStartDate={setStartDate}
+        />
+        <Button
+          name="Применить"
+          textColor="white"
+          bgColor="#6dbae5"
+          onClick={setFilteredData}
+        />
       </div>
     </div>
   );

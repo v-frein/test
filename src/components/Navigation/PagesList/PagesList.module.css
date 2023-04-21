@@ -4,16 +4,14 @@
     gap: 32px;
 }
 
-.container > li {
+.container > li, .container > li > a {
     cursor: pointer;
     user-select: none;
     height: 48px;
     display: flex;
     align-items: center;
-}
-
-
-.other {
+    text-decoration: none;
+    color: rgb(193, 193, 193);
 }
 
 .dropdownList {

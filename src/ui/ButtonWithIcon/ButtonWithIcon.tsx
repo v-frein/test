@@ -1,16 +1,22 @@
 import styles from "./ButtonWithIcon.module.css";
 
+interface ButtonWithIconProps {
+  name: string;
+  image: string;
+  color?: string;
+  bgColor?: string;
+}
+
 export const ButtonWithIcon = ({
   name,
   image,
-}: {
-  name: string;
-  image: string;
-}) => {
+  color,
+  bgColor,
+}: ButtonWithIconProps) => {
   return (
-    <div className={styles.button}>
-      <img src={image} />
-      <p>{name}</p>
+    <div className={styles.button} style={{ backgroundColor: bgColor }}>
+      <img alt="" src={image} />
+      <p style={{ color: color }}>{name}</p>
     </div>
   );
 };

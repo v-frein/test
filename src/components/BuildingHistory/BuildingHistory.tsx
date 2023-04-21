@@ -3,10 +3,11 @@ import { Table } from "./Table";
 import { DialogWithTitle } from "../../ui/";
 
 import styles from "./BuildingHistory.module.css";
+import { Link } from "react-router-dom";
 
 const footer = (
   <div className={styles.footer}>
-    <a href="#">Вся история →</a>
+    <Link to="/buildinghistory">Вся история →</Link>
   </div>
 );
 

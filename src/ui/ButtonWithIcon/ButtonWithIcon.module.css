@@ -1,6 +1,6 @@
 .button {
     border: 1px solid gray;
-    padding: 8px;
+    padding: 6px;
     display: flex;
     user-select: none;
     cursor: pointer;
